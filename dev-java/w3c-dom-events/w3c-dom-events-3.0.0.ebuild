@@ -7,12 +7,12 @@ EAPI="5"
 inherit eutils java-pkg-2 java-ant-2
 
 SLOT="0"
-DESCRIPTION="W3C DOM SMIL - Java Bindings"
+DESCRIPTION="W3C DOM Events - Java Bindings"
 
-MY_FNAME="smil_1.0.1.v200903091627"
+MY_FNAME="events_3.0.0.draft20060413_v201105210656"
 
-HOMEPAGE="http://www.w3.org/TR/SVG11/java.html"
-SRC_URI="http://www.w3.org/TR/2011/REC-SVG11-20110816/java-binding.zip -> org.w3c.dom.${MY_FNAME}.zip" 
+HOMEPAGE="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/java-binding.html"
+SRC_URI="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/java-binding.zip -> org.w3c.dom.${MY_FNAME}.zip" 
 
 LICENSE="License-W3C"
 KEYWORDS="~amd64"
@@ -32,7 +32,7 @@ src_configure() {
 
 src_compile() {
            cd "${S}"
-           ant "-Ddir=svg" "-Dfilename=${MY_FNAME}"
+           ant "-Dfilename=${MY_FNAME}"
 }
 
 src_install() {

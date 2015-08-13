@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Bundle-Vendor: %providerName
+Eclipse-SourceBundle: org.w3c.dom.events;version="3.0.0.draft20060413_
+ v201105210656"
+Bundle-Localization: plugin
+Bundle-Name: %bundleName
+Bundle-SymbolicName: org.w3c.dom.events.source
+Eclipse-SourceReferences: scm:cvs:pserver:dev.eclipse.org:/cvsroot/too
+ ls:org.eclipse.orbit/org.w3c.dom.events/source-bundle;project="org.w3
+ c.dom.events.source";tag=v201105210656
+Bundle-Version: 3.0.0.draft20060413_v201105210656
+Bundle-ManifestVersion: 2
+
+Name: org/w3c/dom/events/UIEvent.java
+SHA1-Digest: 3i8CnTan2pDHjdZ0CjkpDzYPyfU=
+
+Name: org/w3c/dom/events/MutationNameEvent.java
+SHA1-Digest: Kx1yX6K8bDcr4gLrHorCived5B8=
+
+Name: org/w3c/dom/events/MouseEvent.java
+SHA1-Digest: eUXkbMR15x5IULHTdlITpcvwFZA=
+
+Name: org/w3c/dom/events/EventException.java
+SHA1-Digest: Z/ab1UYxI7wTcWiC60xAx6AfdD0=
+
+Name: org/w3c/dom/events/DocumentEvent.java
+SHA1-Digest: IA2b+BFkQerTKI9Jb/zT8fX96Og=
+
+Name: about_files/LICENSE.dom-software.txt
+SHA1-Digest: MaOTLhF77bUKU6CuZi7B5UpQvoI=
+
+Name: org/w3c/dom/events/Event.java
+SHA1-Digest: pVCKAVeD/M4n0CzfVLncNLUTF7w=
+
+Name: plugin.properties
+SHA1-Digest: GXeE+qCcCVjdxu4Tu7IAG1CBHeY=
+
+Name: org/w3c/dom/events/KeyboardEvent.java
+SHA1-Digest: Kv/Ed/oUFoGHThr+0zsQhrD2+LI=
+
+Name: org/w3c/dom/events/MutationEvent.java
+SHA1-Digest: IZMB/detxqzjpG2NKycNmzaV+Cc=
+
+Name: org/w3c/dom/events/EventListener.java
+SHA1-Digest: XKPVQNgmCpsJy7VAQpc9M7XA5T0=
+
+Name: org/w3c/dom/events/TextEvent.java
+SHA1-Digest: 5TsEm+tZ7Y1of3n97gqhm1Z6dBE=
+
+Name: org/w3c/dom/events/EventTarget.java
+SHA1-Digest: jcLsTsx/1trOnuvJWKDhvZyJgkg=
+
+Name: org/w3c/dom/events/CustomEvent.java
+SHA1-Digest: SyKSiC8IOrIXIqYrCRY75BjoEfo=

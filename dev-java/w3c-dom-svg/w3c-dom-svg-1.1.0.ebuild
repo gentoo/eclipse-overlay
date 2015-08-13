@@ -7,10 +7,12 @@ EAPI="5"
 inherit eutils java-pkg-2 java-ant-2
 
 SLOT="0"
-DESCRIPTION="Java Language Binding - SVG."
+DESCRIPTION="W3C DOM SVG - Java Bindings."
+
+MY_FNAME="svg_1.1.0.v201011041433"
 
 HOMEPAGE="http://www.w3.org/TR/SVG11/java.html"
-SRC_URI="http://www.w3.org/TR/2011/REC-SVG11-20110816/java-binding.zip" 
+SRC_URI="http://www.w3.org/TR/2011/REC-SVG11-20110816/java-binding.zip -> org.w3c.dom.${MY_FNAME}.zip" 
 
 LICENSE="License-W3C"
 KEYWORDS="~amd64"
@@ -20,7 +22,6 @@ RDEPEND=">=virtual/jdk-1.6
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
-MY_FNAME="svg_1.1.0.v201011041433"
 MY_FDIR="/usr/share/w3c"
 
 src_configure() {

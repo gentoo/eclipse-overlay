@@ -1,0 +1,21 @@
+<project default="mkjar">
+	<target name="prepare">
+		<mkdir dir="src"/>
+		<mkdir dir="src/org"/>
+		<copy todir="src/org/">
+			<fileset dir="org/"/>
+		</copy>
+	</target>
+	<target name="compile" depends="prepare">
+		<mkdir dir="bin"/>
+		<javac srcdir="src" destdir="bin"/>
+	</target>
+	<target name="mkjar" depends="compile">
+		<jar destfile="org.w3c.dom.${filename}.jar"
+		   manifest="files/org.w3c.dom.${filename}-manifest.txt">
+			<fileset dir="bin/" excludes="**/${dir}/**"/>
+			<fileset dir="files/about_files"/>
+			<fileset file="COPYRIGHT.html"/>
+		</jar>
+	</target>
+</project>
