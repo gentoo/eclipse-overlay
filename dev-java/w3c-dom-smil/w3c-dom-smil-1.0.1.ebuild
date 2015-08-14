@@ -26,16 +26,16 @@ MY_FDIR="/usr/share/w3c"
 
 src_configure() {
            #elog "Copy files from ${FILESDIR}/ to ${S}/"
-           cp -R "${FILESDIR}/" "${S}/"
-           mv "${S}/files/build.xml" "${S}/"
+           cp -R "${FILESDIR}/" "${S}/" || die "Could not copy files from '${FILESDIR}' to '${S}'"
+           mv "${S}/files/build.xml" "${S}/" || die "Could not move '${S}/files/build.xml' one directory up"
 }
 
 src_compile() {
-           cd "${S}"
-           ant "-Ddir=svg" "-Dfilename=${MY_FNAME}"
+           cd "${S}" || die "Could not change to dir '${S}'"
+           ant "-Ddir=svg" "-Dfilename=${MY_FNAME}" || die "Could not execute ant!"
 }
 
 src_install() {
-           dodir "${MY_FDIR}"
-           cp "${S}/org.w3c.dom.${MY_FNAME}.jar" "${D}/${MY_FDIR}/"
+           dodir "${MY_FDIR}" || die "Could not create dir '${D}/${MY_FDIR}'"
+           cp "${S}/org.w3c.dom.${MY_FNAME}.jar" "${D}/${MY_FDIR}/" || die "Could not copy jar from '${S}' to '${D}/${MY_DIR}'"
 }

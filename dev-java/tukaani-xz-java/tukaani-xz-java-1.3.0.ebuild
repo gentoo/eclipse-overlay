@@ -33,6 +33,6 @@ src_compile() {
 }
 
 src_install() {
-           dodir "${MY_FDIR}"
+           dodir "${MY_FDIR}" || die "Could not create '${MY_FDIR}'!"
            cp "${S}/build/jar/xz.jar" "${D}/${MY_FDIR}/${MY_FNAME}" || die "Jar-file could not be found in work-dir!"
 }
