@@ -1,0 +1,21 @@
+<project default="mkjar">
+	<target name="prepare">
+		<mkdir dir="src"/>
+		<mkdir dir="src/javax"/>
+		<copy todir="src/javax/">
+			<fileset dir="javax/"/>
+		</copy>
+	</target>
+	<target name="compile" depends="prepare">
+		<mkdir dir="bin"/>
+		<javac srcdir="src" destdir="bin"/>
+	</target>
+	<target name="mkjar" depends="compile">
+		<jar destfile="javax.annotation_1.2.0.v201401042248.jar"
+			manifest="META-INF/MANIFEST.MF">
+			
+			<fileset dir="bin/"/>
+			<fileset dir="." includes="META-INF/**"/>
+		</jar>
+	</target>
+</project>

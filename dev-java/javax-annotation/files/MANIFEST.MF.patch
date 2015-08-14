@@ -1,0 +1,17 @@
+--- META-INF/MANIFEST.MF	2013-10-08 15:58:02.000000000 +0200
++++ META-INF/MANIFEST.MF.new	2015-08-14 22:32:33.231037246 +0200
+@@ -23,4 +23,13 @@
+  form
+ Specification-Version: 1.2
+ Archiver-Version: Plexus Archiver
+-
++Bundle-Vendor: %bundleProvider
++Eclipse-SourceBundle: javax.annotation;version="1.2.0.v201401042248"
++Bundle-Localization: plugin
++Bundle-Name: %bundleName
++Bundle-SymbolicName: javax.annotation.source
++Eclipse-SourceReferences: scm:cvs:pserver:dev.eclipse.org:/cvsroot/too
++ ls:org.eclipse.orbit/javax.annotation/source-bundle;project="javax.an
++ notation.source";tag=v201401042248
++Bundle-Version: 1.2.0.v201401042248
++Bundle-ManifestVersion: 2
