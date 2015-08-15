@@ -16,4 +16,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=virtual/jre-1.5"
-DEPEND=">=virtual/jdk-1.5"
+DEPEND=">=virtual/jdk-1.5
+	app-arch/unzip"
