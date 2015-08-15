@@ -11,7 +11,7 @@ DESCRIPTION="JSR 250 Common Annotations"
 HOMEPAGE="https://jcp.org/en/jsr/detail?id=250"
 SRC_URI="http://central.maven.org/maven2/javax/annotation/javax.annotation-api/${PV}/javax.annotation-api-${PV}-sources.jar"
 
-LICENSE="CDDL"
+LICENSE="|| ( CDDL GPL-2 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
