@@ -29,6 +29,7 @@ CDEPEND="
 	"
 DEPEND="${CDEPEND}"
 RDEPEND=">=virtual/jdk-1.6
+	x11-libs/gtk+:2
 	${CDEPEND}"
 
 S="${WORKDIR}"/eclipse
