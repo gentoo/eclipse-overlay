@@ -35,18 +35,35 @@ S="${WORKDIR}"/eclipse
 
 _unbundle_single() {
 	local mode="${1}" destination_jar="${2}" package="${3}" package_jar="${4}"
+	local abs_destination_jar="${PWD}/${destination_jar}"
+	local backup_dir="${T}"/${destination_jar##*/}.dir
+
 	if [[ "${mode}" = delete ]]; then
+		# Backup META-INF/MANIFEST.MF with checksums
+		# Then delete .jar file
+		mkdir -p "${backup_dir}"/META-INF
+		unzip -p "${destination_jar}" META-INF/MANIFEST.MF \
+				| sed -e '/^Name:/d' -e '/^SHA1-Digest:/d' -e '/^\s*$/d' \
+				> "${backup_dir}"/META-INF/MANIFEST.MF || die
 		rm "${destination_jar}" || die
 	elif [[ "${mode}" = wire ]]; then
+		einfo "Replacing bundled ${destination_jar}..."
+		# Create new .jar based on system-wide build
+		# In the process, apply META-INF/MANIFEST.MF backup
 		java-pkg_jar-from "${package}" "${package_jar}" "${destination_jar}"
+		local source_jar="$(readlink -f "${destination_jar}")"
+		rm "${destination_jar}" || die
+
+		cp "${source_jar}" "${destination_jar}" || die
+		( cd "${backup_dir}" \
+				&& [[ -f "${abs_destination_jar}" ]] \
+				&& zip "${abs_destination_jar}" META-INF/MANIFEST.MF >/dev/null
+		) || die
 	fi
 }
 
 _unbundle_known() {
 	local mode="${1}"
-
-	ewarn 'Unbundling broken, skipping.'
-	return 0
 
 	# https://wiki.gentoo.org/wiki/Eclipse/Building_From_Source
 	_unbundle_single "${mode}" plugins/com.ibm.icu_54.1.1.v201501272100.jar icu4j-52 icu4j.jar log4j-1.2.8.jar
