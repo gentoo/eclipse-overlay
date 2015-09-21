@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.5
 RDEPEND=">=virtual/jre-1.5"
 
 src_prepare() {
-	rm -rf "${WORKDIR}/org/w3c/dom/svg" || die "could not delete folder 'svg'"
+	rm -r "${WORKDIR}/org/w3c/dom/svg" || die "could not delete folder 'svg'"
 }
 
 src_install() {

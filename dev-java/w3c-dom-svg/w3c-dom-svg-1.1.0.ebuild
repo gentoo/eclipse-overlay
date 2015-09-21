@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 JAVA_GENTOO_CLASSPATH="w3c-dom-smil"
 
 src_prepare() {
-	rm -rf "${WORKDIR}/org/w3c/dom/smil" || die "could not delete folder 'smil'"
+	rm -r "${WORKDIR}/org/w3c/dom/smil" || die "could not delete folder 'smil'"
 }
 
 src_install() {
