@@ -11,13 +11,13 @@ SLOT="0"
 DESCRIPTION="W3C DOM Events - Java Bindings"
 
 HOMEPAGE="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/java-binding.html"
-SRC_URI="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/java-binding.zip -> ${P}.zip" 
+SRC_URI="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/java-binding.zip -> ${P}.zip"
 
 LICENSE="W3C"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=virtual/jdk-1.5
-		app-arch/unzip"
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.5"
 
 src_install() {

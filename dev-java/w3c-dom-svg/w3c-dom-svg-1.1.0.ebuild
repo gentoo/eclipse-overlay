@@ -17,17 +17,17 @@ KEYWORDS="~amd64 ~x86"
 
 MYDEPEND=">=dev-java/w3c-dom-smil-1.0.1"
 DEPEND=">=virtual/jdk-1.5
-		${MYDEPEND}
-		app-arch/unzip"
+	${MYDEPEND}
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.5
-		${MYDEPEND}"
+	${MYDEPEND}"
 
 JAVA_GENTOO_CLASSPATH="w3c-dom-smil"
 
 src_prepare() {
 	rm -rf "${WORKDIR}/org/w3c/dom/smil" || die "could not delete folder 'smil'"
 }
-        
+
 src_install() {
 	java-pkg_dojar "${PN}.jar"
 	use source && java-pkg_dosrc org
