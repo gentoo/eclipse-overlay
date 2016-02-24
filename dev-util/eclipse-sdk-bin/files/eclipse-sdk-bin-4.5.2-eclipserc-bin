@@ -18,3 +18,8 @@ ECLIPSE_XMX=256m
 
 #ECLIPSE_PERMSIZE=64m
 #ECLIPSE_MAX_PERMSIZE=128m
+
+# Eclipse 4.5 Mars has some visual issues with GTK>=3.16
+# SWT_GTK3=1 - to enable GTK3
+# SWT_GTK3=0 - to enable GTK2
+SWT_GTK3=

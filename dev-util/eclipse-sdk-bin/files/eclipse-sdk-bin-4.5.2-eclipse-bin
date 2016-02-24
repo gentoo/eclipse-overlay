@@ -40,4 +40,7 @@ esac
 # Fix for JRE 1.5.
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib
 
+# option to switch GTK backend
+[ -n "${SWT_GTK3}" ] && export SWT_GTK3="${SWT_GTK3}"
+
 exec "${ECLIPSE_BIN}" -vm $(java-config --java) "$@" "${ECLIPSE_USER_ARGS}" -vmargs ${VM_ARGS} 
