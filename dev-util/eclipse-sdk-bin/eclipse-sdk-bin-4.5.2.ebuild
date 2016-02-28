@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils versionator java-utils-2
 
-SR="2"
+SR="$(get_version_component_range 3)"
 RNAME="mars"
 
 SRC_BASE="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"
