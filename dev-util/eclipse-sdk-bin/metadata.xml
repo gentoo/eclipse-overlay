@@ -7,5 +7,8 @@
 	</maintainer>
 	<use>
 		<flag name='system-icu'>Use the system-wide <pkg>dev-java/icu4j</pkg></flag>
+		<flag name='lombok'>Pull in <pkg>dev-java/lombok</pkg>, it can still be overwritten on a per-user basis</flag>
 	</use>
 </pkgmetadata>
+
+

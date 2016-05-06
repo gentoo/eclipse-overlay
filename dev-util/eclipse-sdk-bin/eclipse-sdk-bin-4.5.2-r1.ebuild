@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -33,7 +33,7 @@ CDEPEND="
 DEPEND="${CDEPEND}"
 RDEPEND=">=virtual/jdk-1.6
 	x11-libs/gtk+:2
-	lombok? ( dev-java/lombok )
+	lombok? ( dev-java/lombok-bin )
 	${CDEPEND}"
 
 S="${WORKDIR}"/eclipse
