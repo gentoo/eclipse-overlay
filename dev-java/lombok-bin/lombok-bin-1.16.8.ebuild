@@ -15,11 +15,14 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=virtual/jdk-1.7:*"
-RDEPEND=">=virtual/jre-1.7
-	${DEPEND}"
+DEPEND=">=virtual/jdk-1.7"
+RDEPEND=">=virtual/jre-1.7"
 
 S="${WORKDIR}"
+
+src_unpack() {
+	:
+}
 
 src_install() {
 	mkdir -p "${D}/usr/share/lombok"
