@@ -6,6 +6,7 @@
 # Copyright (c) 2007-2008, Jean-Noël Rivasseau <elvanor@gentoo.org>
 # Copyright (c) 2004-2008, Gentoo Foundation
 # Copyright (c) 2015, Sebastian Pipping <sping@gentoo.org>
+# Copyright (c) 2016, Stefan Langenmaier <stefan.langenmaier@gmail.com>
 #
 # Licensed under the GNU General Public License, version 2
 #
@@ -36,6 +37,9 @@ esac
 [ -n "${ECLIPSE_XMX}" ] && VM_ARGS="${VM_ARGS} -Xmx${ECLIPSE_XMX}"
 [ -n "${ECLIPSE_PERMSIZE}" ] && VM_ARGS="${VM_ARGS} -XX:PermSize=${ECLIPSE_PERMSIZE}"
 [ -n "${ECLIPSE_MAX_PERMSIZE}" ] && VM_ARGS="${VM_ARGS} -XX:MaxPermSize=${ECLIPSE_MAX_PERMSIZE}"
+
+# lombok support
+[ -n "${LOMBOK_JAR}" ] && [ -f "${LOMBOK_JAR}" ] && VM_ARGS="${VM_ARGS} -javaagent:${LOMBOK_JAR}"
 
 # Fix for JRE 1.5.
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib
