@@ -25,6 +25,6 @@ src_unpack() {
 }
 
 src_install() {
-	mkdir -p "${D}/usr/share/lombok"
-	cp "${DISTDIR}/${MY_P}.jar" "${D}/usr/share/lombok/lombok.jar"
+	mkdir -p "${D}/usr/share/lombok" || die
+	cp "${DISTDIR}/${MY_P}.jar" "${D}/usr/share/lombok/lombok.jar" || die
 }
