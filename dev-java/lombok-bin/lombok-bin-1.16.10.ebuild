@@ -8,7 +8,7 @@ inherit java-utils-2
 MY_P=${PN%%-bin}-${PV}
 MY_PN=${PN%%-bin}
 
-DESCRIPTION="Project Lombok makes java a spicier language by adding 'handlers' that know how to build and compile simple, boilerplate-free, not-quite-java code."
+DESCRIPTION="Adds 'handlers' that help reducing boilerplate code with Java"
 HOMEPAGE="https://projectlombok.org/"
 SRC_URI="https://projectlombok.org/downloads/${MY_P}.jar"
 LICENSE="MIT"
