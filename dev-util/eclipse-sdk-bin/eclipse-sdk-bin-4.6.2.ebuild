@@ -38,6 +38,8 @@ RDEPEND=">=virtual/jdk-1.8
 
 S="${WORKDIR}"/eclipse
 
+HTML_DOCS="readme/"
+
 _unbundle_single() {
 	local mode="${1}" destination_jar="${2}" package="${3}" package_jar="${4}"
 	local abs_destination_jar="${PWD}/${destination_jar}"
@@ -102,7 +104,7 @@ src_install() {
 	exeinto ${dest}
 	doexe eclipse
 
-	dohtml -r readme/*
+	einstalldocs
 
 	dobin "${T}"/eclipse-bin-${SLOT}
 	insinto /etc
