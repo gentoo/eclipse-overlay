@@ -26,4 +26,4 @@ SWT_GTK3=1
 
 # Default lombok.jar
 # can also be unset/overwritten by the user
-LOMBOK_JAR=/usr/share/lombok/lombok.jar
+LOMBOK_JAR=/usr/share/lombok/lib/lombok.jar
