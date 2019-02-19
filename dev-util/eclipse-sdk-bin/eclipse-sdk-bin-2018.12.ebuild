@@ -13,7 +13,7 @@ SRC_BASE="http://www.eclipse.org/downloads/download.php?file=/technology/epp/dow
 DESCRIPTION="Eclipse SDK"
 HOMEPAGE="http://www.eclipse.org"
 SRC_URI="
-	${SRC_BASE}-x86_64.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${PV}.tar.gz
+	${SRC_BASE}-x86_64.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${OWN_PV}.tar.gz
 	"
 
 LICENSE="EPL-1.0"
