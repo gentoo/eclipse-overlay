@@ -6,9 +6,8 @@ EAPI=6
 inherit eutils versionator java-utils-2
 
 SR="$(get_version_component_range 3-)"
-RNAME="neon"
 
-SRC_BASE="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"
+SRC_BASE="https://download.eclipse.org/eclipse/downloads/drops4/R-4.10-201812060815/download.php?dropFile=eclipse-SDK-${PV}-linux-gtk"
 
 DESCRIPTION="Eclipse SDK"
 HOMEPAGE="http://www.eclipse.org"
