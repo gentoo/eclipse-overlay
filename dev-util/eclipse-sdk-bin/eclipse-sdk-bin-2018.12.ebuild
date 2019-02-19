@@ -107,5 +107,5 @@ src_install() {
 	dobin "${T}"/eclipse-bin-${SLOT}
 	insinto /etc
 	doins "${T}"/eclipserc-bin-${SLOT}
-	make_desktop_entry "eclipse-bin-${SLOT}" "Eclipse ${RNAME^}/${PV} (bin)" "${dest}/icon.xpm"
+	make_desktop_entry "eclipse-bin-${SLOT}" "Eclipse ${RNAME^}/${OWN_PV} (bin)" "${dest}/icon.xpm"
 }
