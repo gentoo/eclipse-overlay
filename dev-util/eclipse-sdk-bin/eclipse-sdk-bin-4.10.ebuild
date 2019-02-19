@@ -7,18 +7,13 @@ inherit eutils versionator java-utils-2
 
 SR="$(get_version_component_range 3-)"
 
-SRC_BASE="https://download.eclipse.org/eclipse/downloads/drops4/R-4.10-201812060815/download.php?dropFile=eclipse-SDK-${PV}-linux-gtk"
-
 DESCRIPTION="Eclipse SDK"
 HOMEPAGE="http://www.eclipse.org"
-SRC_URI="
-	amd64? ( ${SRC_BASE}-x86_64.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${PV}.tar.gz )
-	x86? ( ${SRC_BASE}.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-${PV}.tar.gz )
-	"
+SRC_URI="https://download.eclipse.org/eclipse/downloads/drops4/R-4.10-201812060815/download.php?dropFile=eclipse-java-${PV}-linux-gtk-x86_64.tar.gz"
 
 LICENSE="EPL-1.0"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="lombok"
 
 CDEPEND="
